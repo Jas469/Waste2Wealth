@@ -3,23 +3,59 @@ import React from 'react';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 // import { Link } from 'react-router-dom';
 import Link  from "next/link";
+import { useEffect } from "react"
+import { FaEdit } from 'react-icons/fa'
+import { FiSave } from 'react-icons/fi'
 
 import SidebarNGO from './SidebarNGO';
 import { useState } from 'react';
 // import { button } from 'react-bootstrap';
 
 export default function Merchant() {
+    
+  const [disable, setdisable] = useState(true);
+  
+  const [point, setpoint] = useState('opacity-40 cursor-not-allowed');
     const [statee, setStatee] = useState('Select State');
     const handleeve = (e) => {
         setStatee(e.target.value);
         console.log(e.target.value);
     }
 
+    const edit = (e) => {
+        e.preventDefault()
+        setread(false)
+        setdisable(false)
+        setpoint('cursor-pointer')
+      }
+      const save = async (e) => {
+        // console.log(personaldata);
+        e.preventDefault()
+        setread(true)
+        setdisable(true)
+        setpoint('opacity-40 cursor-not-allowed')
+        // let {}
+        let phone = personaldata.phone;
+        let email = personaldata.email;
+        let linkedin = personaldata.linkedin;
+        // {phone,}
+        let data = { phone, email, linkedin }
+        // const res = await fetch('http://localhost:3000/api/facultypersonaldata', {
+        //   method: 'POST',
+        //   headers: {
+        //     'Content-Type': 'application/json',
+        //   },
+        //   body: JSON.stringify(data),
+        // })
+        // let response = await res.json();
+    
+      }
+
     return (
         <div className='flex'>
             <div className='w-[20%]'><SidebarNGO /></div>
 
-            {/* <div className='w-full border-2 border-solid border-red-200'> */}
+            {/* <div className='w-full'> */}
             <div to="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
             {/* 
                 <div className="container">
@@ -121,43 +157,43 @@ export default function Merchant() {
                 </div>
             </div> */}
 
-            <div className='w-full border-2 border-solid border-red-900 ml-5 flex'>
+            <div className='w-full ml-5 flex justify-center'>
                 {/* sidebar */}
-                <div className='w-[45%] border-2 border-solid border-red-600 mr-5 '>
+                <div className='w-[85%] mr-5 '>
                     <div className="user-info mt-10">
-                        <img className=" w-[125px] rounded-full border-2 border-solid border-red-600 m-auto mb-4" src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="" />
+                        <img className=" w-[125px] rounded-full m-auto flex justify-center mb-4" src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="" />
                         <div className='text-xl text-center w-full'>Institution Name</div>
-                        <div className='text-left mt-2 p-7 ml-8 space-y-4'>
-                            <div className='flex'>
+                        <div className='text-left mt-2 p-7 ml-8 space-y-6'>
+                            <div className='flex ml-20'>
                                 <div>Email address : </div>
                                 <div className='ml-14'>
-                                    <input type='email' placeholder='Enter your email' className=' border-2 border-solid border-gray-400 rounded-md pl-1' />
+                                <input type='email' placeholder='Enter your email' className=' py-1 w-96 px-2 focus:outline-none focus:border-slate-500 hover:shadow border-2 border-solid border-gray-400 rounded-md pl-1' />
                                 </div>
                             </div>
-                            <div className='flex'>
+                            <div className='flex ml-20'>
                                 <div>
                                     Contact :
                                 </div>
                                 <div className='ml-24'>
-                                <input type='email' placeholder='Enter your email' className='w-full py-1 px-2 focus:outline-none focus:border-slate-500 hover:shadow border-2 border-solid border-gray-400 rounded-md pl-1' />
+                                <input type='email' placeholder='Enter your email' className=' py-1 w-96 px-2 focus:outline-none focus:border-slate-500 hover:shadow border-2 border-solid border-gray-400 rounded-md pl-1' />
                                 </div>
 
                             </div>
-                            <div className='flex'>
+                            <div className='flex ml-20'>
                                 <div>
                                     location :
                                 </div>
                                 <div className='ml-24'>
-                                <input type='email' placeholder='Enter your email' className='w-full py-1 px-2 focus:outline-none focus:border-slate-500 hover:shadow border-2 border-solid border-gray-400 rounded-md pl-1' />
+                                <input type='email' placeholder='Enter your email' className=' py-1 w-96 px-2 focus:outline-none focus:border-slate-500 hover:shadow border-2 border-solid border-gray-400 rounded-md pl-1' />
 
                                 </div>
                             </div>
-                            <div className='flex'>
+                            <div className='flex ml-20'>
                                 <div>
                                     State :
                                 </div>
-                                <div className="btn-group ml-20">
-                                    <button type="button" className="btn btn-light dropdown-toggle w-48 shadow-none py-1 ml-10" data-bs-toggle="dropdown" aria-expanded="false">
+                                <div className="btn-group ml-20 w-96">
+                                    <button type="button" className="btn btn-light dropdown-toggle w-48 shadow-none py-1 ml-10 text-sm" data-bs-toggle="dropdown" aria-expanded="false">
                                         {statee}
                                     </button>
                                     <ul className="dropdown-menu">
@@ -187,21 +223,21 @@ export default function Merchant() {
                                     </ul>
                                 </div>
                             </div>
-                            <div className='flex'>
+                            <div className='flex ml-20'>
                                 <div>
                                     Type of User :
                                 </div>
                                 <div className='ml-16'>
-                                <input type='email' placeholder='Enter your email' className='w-full py-1 px-2 focus:outline-none focus:border-slate-500 hover:shadow border-2 border-solid border-gray-400 rounded-md pl-1' />
+                                <input type='email' placeholder='Enter your email' className=' py-1 w-96 px-2 focus:outline-none focus:border-slate-500 hover:shadow border-2 border-solid border-gray-400 rounded-md pl-1' />
 
                                 </div>
                             </div>
-                            <div className='flex'>
+                            <div className='flex ml-20'>
                                 <div>
                                     Points:
                                 </div>
                                 <div className='ml-28'>
-                                <input type='email' placeholder='Enter your email' className='w-full py-1 px-2 focus:outline-none focus:border-slate-500 hover:shadow border-2 border-solid border-gray-400 rounded-md pl-1' />
+                                <input type='email' placeholder='Enter your email' className=' py-1 w-96 px-2 focus:outline-none focus:border-slate-500 hover:shadow border-2 border-solid border-gray-400 rounded-md pl-1' />
 
                                 </div>
                             </div>
@@ -219,13 +255,20 @@ export default function Merchant() {
                             <li><a href="#/"><span className="fa fa-clock-o"></span> Reminders</a></li >
                         </ul >
                     </nav > */}
+                <div className="flex">
+                    <div className="mt-3 flex space-x-7">
+                    <button type="submit" onClick={edit} className=" flex items-center space-x-1 bg-amber-800 rounded text-white px-2 py-1 cursor-pointer"><div>Edit</div> <FaEdit className="" /></button>
+                    <button disabled={disable} onClick={save} className={`flex items-center space-x-1 bg-amber-800 rounded text-white px-2 py-1 ${point}`}><div>Save</div> <FiSave className="" /></button>
+
+                    </div>
+                  </div>
                 </div >
 
-            <div className='border-2 border-solid border-gray-600 w-[50%]'>
+            {/* <div className='border-2 border-solid border-gray-600 w-[50%]'>
                 <div>
 
                 </div>
-            </div>
+            </div> */}
             </div >
 
 

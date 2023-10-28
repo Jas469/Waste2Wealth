@@ -1,10 +1,12 @@
 import { MdEmail } from 'react-icons/md'
 import { IoMdCall } from 'react-icons/io'
 import Link from 'next/link'
+import AboutUs from '../pages/AboutUs'
 
 export default function Navbar(props) {
     return <>
         <div className={`h-24 w-full justify-between flex shadow-xl  ${props.class}`}>
+            <AboutUs/>
             <div className='flex '>
                 <div className="h-[100px] w-28 ml-12 mr-8 xsm:ml-2 xsm:mr-0 ">
                     <div className="pt-1 w-[105px]"><Link href='/'><img className="h-[90px] w-[110px]" src="/logo_gif.gif" alt="" /></Link>
@@ -25,5 +27,6 @@ export default function Navbar(props) {
                 <div className='flex'><div><button className='text-lg text-amber-800 mt-1'><IoMdCall /></button></div> <div className='ml-2 text-yellow-300 font-semibold'> +91-94633-83753</div></div>
             </div>
         </div>
+        
     </>
 }

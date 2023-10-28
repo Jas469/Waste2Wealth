@@ -2,12 +2,12 @@
 // import Header from "./Header";
 
 
-export default function About_us() {
+export default function AboutUs() {
     return (<>
         <div>
             {/* <Header/> */}
-            <div className=" h-30 w-full p-5 mt-3  ">
-                <div className=' text-left text-4xl font-BlinkMacSystemFont font-extrabold text-green-700'>ABOUT US</div>
+            <div className=" h-30 w-full p-2 ">
+                <div className='text-center text-4xl font-BlinkMacSystemFont font-extrabold text-green-700'>ABOUT US</div>
             </div>
 
             <div className="flex pl-2 h-auto justify-between flex-row mt-3 mx-1 ml-2 border-1 rounded-md flex-wrap ">
@@ -25,7 +25,7 @@ export default function About_us() {
 
             <div className=" my-8 w-full h-[650px] bg-gray-900">
                 <div className=" p-12 text-center text-white text-5xl font-BlinkMacSystemFont">WHAT WE DO </div>
-                <div className=" pb-2 px-2 text-center text-white text-2xl font-serif">Fuelled with enthusiasm, Givify’s founders gave a shape to their dream. Over the last two years, Givify has evolved as a sustainable Indian social institution – committed to do real work on the ground, and make the society and businesses inclusive in the process of bringing change. </div>
+                <div className=" pb-2 px-2 text-center text-white text-2xl font-serif">Fuelled with enthusiasm, W2W founders gave a shape to their dream. Over the last two years, W2W has evolved as a sustainable Indian social institution – committed to do real work on the ground, and make the society and businesses inclusive in the process of bringing change. </div>
 
                 <div className="flex justify-center w-full">
                     <div className="flex flex-wrap w-full h-auto justify-center space-x-14  mt-8 max-w-[1250px] xsm:space-x-2 ">
