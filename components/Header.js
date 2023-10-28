@@ -82,8 +82,8 @@ const Header = () => {
       </div>
     </div>
 
-    <section className='h-16 w-full flex sticky top-0 order-2 z-10 bg-white  flex-row shadow-lg border-2 border-solid border-red-500'>
-      <div className="max-w-[1600px]  border-2 border-solid border-green-500 w-full flex">
+    <section className='h-16 w-full flex sticky top-0 order-2 z-10 bg-white  flex-row shadow-lg'>
+      <div className="max-w-[1600px] w-full flex">
         <div className='flex w-full flex-row justify-between '>
           <div className='ml-10 w-fit inline-flex xsm:justify-center xsm:flex h-12 my-auto'><Link href="/"><img className='cursor-pointer rounded ' src="/logo-color.png" alt="" /></Link></div>
           
