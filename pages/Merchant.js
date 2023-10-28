@@ -255,10 +255,10 @@ export default function Merchant() {
                             <li><a href="#/"><span className="fa fa-clock-o"></span> Reminders</a></li >
                         </ul >
                     </nav > */}
-                <div className="flex">
-                    <div className="mt-3 flex space-x-7">
-                    <button type="submit" onClick={edit} className=" flex items-center space-x-1 bg-amber-800 rounded text-white px-2 py-1 cursor-pointer"><div>Edit</div> <FaEdit className="" /></button>
-                    <button disabled={disable} onClick={save} className={`flex items-center space-x-1 bg-amber-800 rounded text-white px-2 py-1 ${point}`}><div>Save</div> <FiSave className="" /></button>
+                <div className="flex text-center justify-center">
+                    <div className="mt-3 flex space-x-7 justify-center">
+                    <button type="submit" onClick={edit} className=" flex items-center space-x-1 bg-green-600 rounded text-white px-2 py-1 cursor-pointer"><div>Edit</div> <FaEdit className="" /></button>
+                    <button disabled={disable} onClick={save} className={`flex items-center space-x-1 bg-green-600 rounded text-white px-2 py-1 ${point}`}><div>Save</div> <FiSave className="" /></button>
 
                     </div>
                   </div>

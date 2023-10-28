@@ -12,27 +12,27 @@ export default function SidebarNGO() {
     return (<>
         {/* <Header/> */}
         <div className='h-[579px] w-[240px] flex-col space-y-3 border-2 bg-slate-800  border-solid border-white '>
-            <div className="flex text-left hover:bg-cyan-100 hover:text-black rounded-xl  mt-4 text-white" >
+            {/* <div className="flex text-left hover:bg-cyan-100 hover:text-black rounded-xl  mt-4 text-white" >
                 <a><Link href='/'>
                     <button className="h-10 text-white text-left w-full bg-fixed ml-5 "><div className="flex hover:text-black"><div><MdDomainVerification size={25}/></div><div className=" hover:text-black ml-4">Dashboard</div></div>
                     </button>
                 </Link></a>
-            </div>
+            </div> */}
             <div className="flex text-left hover:bg-cyan-100 hover:text-black rounded-xl" >
-                <a><Link href='/'>
+                <a><Link href='/Merchant'>
                     <button className="h-10 w-full text-white text-left bg-fixed ml-5 "><div className="flex hover:text-black"><div><BsPersonCircle size={23}/></div><div className=" hover:text-black ml-4">Profile</div></div>
                     </button>
                 </Link></a>
             </div>
             <div className="flex text-left hover:bg-cyan-100 hover:text-black rounded-xl" >
-                <a><Link href='/'className="text-white hover:text-black">
-                    <button className="h-10 w-full text-white text-left bg-fixed ml-5 "><div className="flex hover:text-black"><div><MdOutlineUploadFile size={25}/></div><div className=" hover:text-black ml-4">Upload Event</div></div>
+                <a><Link href='/sell'className="text-white hover:text-black">
+                    <button className="h-10 w-full text-white text-left bg-fixed ml-5 "><div className="flex hover:text-black"><div><MdOutlineUploadFile size={25}/></div><div className=" hover:text-black ml-4">Sell</div></div>
                     </button>
                 </Link></a> 
             </div>
             <div className="flex text-left hover:bg-cyan-100 hover:text-black rounded-xl" >
-                <a><Link href='/'>
-                    <button className="h-10 w-full text-white text-left bg-fixed ml-5 "><div className="flex hover:text-black"><div><MdOutlineCreateNewFolder size={25}></MdOutlineCreateNewFolder></div><div className=" hover:text-black ml-4">Generate Requirements</div></div>
+                <a><Link href='./Product'>
+                    <button className="h-10 w-full text-white text-left bg-fixed ml-5 "><div className="flex hover:text-black"><div><MdOutlineCreateNewFolder size={25}></MdOutlineCreateNewFolder></div><div className=" hover:text-black ml-4">Buy</div></div>
                     </button>
                 </Link></a>
             </div>

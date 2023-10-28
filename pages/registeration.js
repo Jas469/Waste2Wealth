@@ -86,7 +86,7 @@ const Register = () => {
 
     <div className="max-w-md xsm:mx-2 justify-around mx-auto my-10 bg-white p-8 rounded-xl shadow shadow-slate-300">
     <h1 className="text-4xl font-medium text-center font-s">Register Now</h1>
-    <p className="text-slate-500  font-semibold text-center mt-2 animate-pulse">Welcome to Magento</p>
+    <p className="text-slate-500  font-semibold text-center mt-2 animate-pulse">Welcome to Waste2Waste</p>
     <form action="/" method='POST' onSubmit={handlesubmit} className="my-4">
         <div className="flex flex-col space-y-4">
             <label htmlFor="firstname">

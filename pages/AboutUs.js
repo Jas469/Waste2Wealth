@@ -29,17 +29,17 @@ export default function AboutUs() {
 
                 <div className="flex justify-center w-full">
                     <div className="flex flex-wrap w-full h-auto justify-center space-x-14  mt-8 max-w-[1250px] xsm:space-x-2 ">
-                        <div className=" flex-col h-[400px] w-[350px] shadow-2xl">
+                        <div className=" flex-col h-[350px] w-[350px] shadow-2xl">
                             <div className=""><img className="rounded-xl w-[350px] h-[45vh]" src="3.jpg" alt="" /></div>
                             <div className="px-1 mt-3 text-3xl uppercase font-medium font-sans text-green-500 text-center">Recycle</div>
                         </div>
-                        <div className="flex-col h-[400px] w-[350px] shadow-2xl">
+                        <div className="flex-col h-[350px] w-[350px] shadow-2xl">
                             <div className=""><img className="rounded-xl w-[350px] h-[45vh] " src="earn.jpg" alt="" /></div>
                             <div className="px-1 mt-3 text-3xl uppercase font-sans font-medium text-green-500 text-center">Earn</div>
                             {/* <div className="px-1"></div> */}
 
                         </div>
-                        <div className="flex-col h-[400px] w-[350px] shadow-2xl">
+                        <div className="flex-col h-[350px] w-[350px] shadow-2xl">
                             <div className=""><img className="rounded-xl w-[350px] h-[45vh]" src="repeat.jpg" alt="" /></div>
                             <div className="px-1 mt-3 text-3xl uppercase font-sans font-medium text-green-500 text-center">Repeat</div>
                         </div>
