@@ -100,14 +100,14 @@ const Header = () => {
           </div>
 
           <div>
-          <nav className="navbar navbar-expand-lg bg-gradient-to-r from-amber-800 via-yellow-500 to-amber-800 flex justify-around items-center font-serif text-md font-semibold">
+          {/* <nav className="navbar navbar-expand-lg bg-gradient-to-r from-amber-800 via-yellow-500 to-amber-800 flex justify-around items-center font-serif text-md font-semibold">
             <div className="container-fluid ">
                 <div className="mb-2"><Link href="/">Home</Link></div>
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> */}
                     {/* <span className="RxHamburgerMenu"></span> */}
-                    <RxHamburgerMenu></RxHamburgerMenu>
-                </button>
-                <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                    {/* <RxHamburgerMenu></RxHamburgerMenu> */}
+                {/* </button> */}
+                {/* <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav me-auto ">
                         <li className="nav-item mb-2"><div><Link href="/about">About Us</Link></div></li>
                         <li className="nav-item mb-2"><div><Link href='/faculty'>Faculty</Link></div></li>
@@ -122,7 +122,7 @@ const Header = () => {
 
                 </div>
             </div>
-        </nav>
+        </nav> */}
             <div className='inline-flex space-x-5 my-auto mr-32'>
               <Link href="/cart"><a className='inline-flex text-2xl hover:text-green-600 text-green-600  '><button><BsCartFill /></button></a></Link>
               <div className="dropdown">
