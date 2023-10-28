@@ -1,15 +1,19 @@
 import Link from 'next/link';
 import React, { useState } from 'react'
 import { TbCurrencyRupee} from 'react-icons/tb'
+import SidebarProd from "../SidebarProd";
 const Product = (props) => {
   const [alldata, setalldata] = useState(props.res)
   return (
-<section className=" min-h-screen  mt-20 flex justify-center ">
+<div className='flex'>
+  <SidebarProd/>
+    
+<section className=" min-h-screen  mt-3 flex justify-center ">
 <div className='flex max-w-[1410px]  flex-wrap justify-evenly w-[95%] bg-slate-50 rounded-xl'>
 
 {alldata.map((element)=>{
  return ( 
-  <Link passHref={true} key={element._id} href={`product/${element._id}`}><div className=' w-[55vh] h-auto bg-white flex-col hover:scale-95 transition duration-150 ease-in-out max-h-screen mt-5 shadow-2xl rounded-xl cursor-pointer' key={element._id}>
+  <Link passHref={true} key={element._id} href={`product/${element._id}`}><div className=' w-[55vh] h-[100vh] bg-white flex-col hover:scale-95 transition duration-150 ease-in-out max-h-screen mt-3 shadow-2xl rounded-xl cursor-pointer' key={element._id}>
 <div className='h-1/2 w-full justify-center flex rounded-lg'><img className='w-fit h-full' src={element.image} alt="" /></div>
 <div className='mt-2 font-bold text-lg p-2 h-auto'>{element.title}</div>
 <div className="flex p-2 ">
@@ -41,6 +45,7 @@ const Product = (props) => {
   })}
 </div>
 </section>
+</div>
     )
 }
 
