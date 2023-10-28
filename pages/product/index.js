@@ -1,14 +1,106 @@
 import Link from 'next/link';
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { TbCurrencyRupee} from 'react-icons/tb'
+import {MdDomainVerification , MdOutlineUploadFile, MdOutlineCreateNewFolder} from 'react-icons/md';
+import {BsPersonCircle} from 'react-icons/bs';
+import {RiLogoutCircleRLine} from 'react-icons/ri';
+// import Link  from "next/link";
 import SidebarProd from "../SidebarProd";
-const Product = (props) => {
-  const [alldata, setalldata] = useState(props.res)
+const Product = () => {
+  const [alldata, setalldata] = useState([])
+
+  const showresult=(e)=>{
+    e.preventDefault()
+    // data.map((curr)=>{
+      console.log(e.target.value)
+   
+        let temp=alldata.filter((currelem)=>{
+          return currelem.category==e.target.value;
+        })
+      
+        setalldata(temp)
+        // console.log(alldata)
+      }
+      useEffect(() => {
+        const url = "http://localhost:3000/api/allproducts";
+        const fetchData = async () => {
+          try {
+            // setspin('')
+            // setopac('opacity-50')
+            let response = await fetch(url);
+            let json = await response.json();
+            console.log(json)
+            setalldata(json)
+          } catch (error) {
+           
+            console.log("error", error);
+          }
+        };
+      
+        fetchData();
+      }, []);
   return (
 <div className='flex'>
-  <SidebarProd/>
-    
-<section className=" min-h-screen  mt-3 flex justify-center ">
+  {/* <SidebarProd/> */}
+  <div className='h-[579px] w-[210px] flex-col space-y-3 border-2 bg-slate-800  border-solid border-white '>
+                <div className="flex justify-center text-center  rounded-xl  mt-4 mb-3 text-white" >
+                
+                        <button value="" onClick={showresult} className="h-10 text-white text-2xl w-full bg-fixed uppercase font-bold "><div className="flex "><div className='mt-1'><MdDomainVerification size={30} /></div><div className="  ml-4">Items</div></div>
+                        </button>
+                    
+                </div>
+                <button value="electronics" onClick={showresult} className="flex text-left hover:bg-green-600 hover:text-black rounded-xl" >
+                
+                        <button  className="h-10 w-full text-white text-left bg-fixed ml-5 "><div className="flex hover:text-black"><div><MdOutlineCreateNewFolder size={25}></MdOutlineCreateNewFolder></div><button  className=" hover:text-black ml-4">Electronics</button></div>
+                        </button>
+                    
+                </button>
+                <button  value="clothes" onClick={showresult} className="flex text-left hover:bg-green-600 hover:text-black rounded-xl" >
+                
+                        <button  className="h-10 w-full text-white text-left bg-fixed ml-5 "><div className="flex hover:text-black"><div><MdOutlineCreateNewFolder size={25}></MdOutlineCreateNewFolder></div><button  className=" hover:text-black ml-4">Clothes</button></div>
+                        </button>
+                    
+                </button>
+                <button value="jewellery" onClick={showresult} className="flex text-left hover:bg-green-600 hover:text-black rounded-xl" >
+                
+                        <button  className="h-10 w-full text-white text-left bg-fixed ml-5 "><div className="flex hover:text-black"><div><MdOutlineCreateNewFolder size={25}></MdOutlineCreateNewFolder></div><button   className=" hover:text-black ml-4">Jewellery </button></div>
+                        </button>
+                    
+                </button>
+                <button value="footwears" onClick={showresult} className="flex text-left hover:bg-green-600 hover:text-black rounded-xl" >
+                
+                        <button  className="h-10 w-full text-white text-left bg-fixed ml-5 "><div className="flex hover:text-black"><div><MdOutlineCreateNewFolder size={25}></MdOutlineCreateNewFolder></div><button   className=" hover:text-black ml-4">Footwears</button></div>
+                        </button>
+                    
+                </button>
+                <button value="papers" onClick={showresult} className="flex text-left hover:bg-green-600 hover:text-black rounded-xl" >
+                
+                        <button  className="h-10 w-full text-white text-left bg-fixed ml-5 "><div className="flex hover:text-black"><div><MdOutlineCreateNewFolder size={25}></MdOutlineCreateNewFolder></div><button   className=" hover:text-black ml-4">Papers</button></div>
+                        </button>
+                    
+                </button>
+                <button value="plastic" onClick={showresult} className="flex text-left hover:bg-green-600 hover:text-black rounded-xl" >
+                
+                        <button  className="h-10 w-full text-white text-left bg-fixed ml-5 "><div className="flex hover:text-black"><div><MdOutlineCreateNewFolder size={25}></MdOutlineCreateNewFolder></div><button   className=" hover:text-black ml-4">Plastic</button></div>
+                        </button>
+                    
+                </button>
+                <button value="wood" onClick={showresult} className="flex text-left hover:bg-green-600 hover:text-black rounded-xl" >
+                
+                        <button  className="h-10 w-full text-white text-left bg-fixed ml-5 "><div className="flex hover:text-black"><div><MdOutlineCreateNewFolder size={25}></MdOutlineCreateNewFolder></div><button className=" hover:text-black ml-4">Wood</button></div>
+                        </button>
+                    
+                </button>
+                <button value="glass" onClick={showresult} className="flex text-left hover:bg-green-600 hover:text-black rounded-xl" >
+                
+                        <button  className="h-10 w-full text-white text-left bg-fixed ml-5 "><div className="flex hover:text-black"><div><MdOutlineCreateNewFolder size={25}></MdOutlineCreateNewFolder></div><div className=" ml-4">Glass</div></div>
+                        </button>
+                    
+                </button>
+                
+            </div>
+
+<section className=" h-[90vh]  overflow-y-auto scrollbar-thin scrollbar-track-white scrollbar-thumb-gray-400 mt-3 flex justify-center ">
 <div className='flex max-w-[1410px]  flex-wrap justify-evenly w-[95%] bg-slate-50 rounded-xl'>
 
 {alldata.map((element)=>{
@@ -50,33 +142,33 @@ const Product = (props) => {
 }
 
 export default Product
-export async function getServerSideProps(context) {
-  const type=context.query.type;
-  const category=context.query.category;
-  const q=context.query.q;
-let res='';
-  if(category && !type){
-    const data=await fetch(`http://localhost:3000/api/allproducts?category=${category}`);
-     res=await data.json();
-  }
- else if(!category && type){
-  const data=await fetch(`http://localhost:3000/api/allproducts?type=${type}`);
-   res=await data.json();
-  }
- else if(category && type){
-  const data=await fetch(`http://localhost:3000/api/allproducts?category=${category}&type=${type}`);
-   res=await data.json();
-  }
- else if(q){
-  const data=await fetch(`http://localhost:3000/api/search?q=${q}`);
-   res=await data.json();
-  }
-else{
-  const data=await fetch(`http://localhost:3000/api/allproducts`);
-   res=await data.json();
-  }
+// export async function getServerSideProps(context) {
+//   const type=context.query.type;
+//   const category=context.query.category;
+//   const q=context.query.q;
+// let res='';
+//   if(category && !type){
+//     const data=await fetch(`http://localhost:3000/api/allproducts?category=${category}`);
+//      res=await data.json();
+//   }
+//  else if(!category && type){
+//   const data=await fetch(`http://localhost:3000/api/allproducts?type=${type}`);
+//    res=await data.json();
+//   }
+//  else if(category && type){
+//   const data=await fetch(`http://localhost:3000/api/allproducts?category=${category}&type=${type}`);
+//    res=await data.json();
+//   }
+//  else if(q){
+//   const data=await fetch(`http://localhost:3000/api/search?q=${q}`);
+//    res=await data.json();
+//   }
+// else{
+//   const data=await fetch(`http://localhost:3000/api/allproducts`);
+//    res=await data.json();
+//   }
  
-  return {
-    props: {res}, // will be passed to the page component as props
-  }
-}
+//   return {
+//     props: {res}, // will be passed to the page component as props
+//   }
+// }
