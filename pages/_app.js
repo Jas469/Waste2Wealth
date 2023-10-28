@@ -1,7 +1,6 @@
 import '../styles/globals.css'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
-import Category from '../components/category'
 import Head from 'next/head'
 // import Navbar from '../components/Navbar'
 
@@ -15,8 +14,8 @@ function MyApp({ Component, pageProps }) {
 <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Inline+One&family=DynaPuff&family=Oswald&display=swap" rel="stylesheet"/>
 </Head>
     <Header/>
-  {/* <Category/> */}
       <Component {...pageProps} />
+
       {/* <Navbar/> */}
       <Footer/>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossOrigin="anonymous"></script>

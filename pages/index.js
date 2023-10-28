@@ -1,12 +1,16 @@
 import Link from "next/link";
 
 import Carousal from "../components/carousal";
+import Category from '../components/category'
+
 
 export default function Home() {
   
   return (<>
-   <div className="min-h-screen mt-5"> 
+   <div className="min-h-screen mt-4"> 
 <Carousal/>
+<Category/>
+
 <div className="h-auto w-full mt-5 flex flex-wrap justify-center">
   <div className="text-center text-gray-700 h-auto text-4xl w-full font-s animate-pulse mb-5">Top offers</div>
   <div className="max-w-[1410px] justify-center flex">
