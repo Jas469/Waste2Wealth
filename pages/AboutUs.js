@@ -2,7 +2,7 @@
 // import Header from "./Header";
 
 
-export default function About_us() {
+export default function AboutUs() {
     return (<>
         <div>
             {/* <Header/> */}

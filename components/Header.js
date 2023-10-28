@@ -8,6 +8,12 @@ import { TbCheckupList } from 'react-icons/tb'
 import { BiLogIn, BiLogOut } from 'react-icons/bi'
 import { RiFeedbackLine } from 'react-icons/ri'
 import { AiOutlineSetting } from 'react-icons/ai'
+import AboutUs from '../pages/AboutUs' ;
+import Product from "../pages/Product/index";
+
+
+// import { RxHamburgerMenu } from 'react-icons/rx';
+
 import { GrClose } from 'react-icons/gr'
 import { ImWarning } from 'react-icons/im'
 import Link from 'next/link'
@@ -101,29 +107,29 @@ const Header = () => {
           </div>
 
           <div className='inline-flex space-x-5 my-auto mr-32'>
-          {/* <nav className="navbar navbar-expand-lg bg-gradient-to-r from-amber-800 via-yellow-500 to-amber-800 flex justify-around items-center font-serif text-md font-semibold">
+           <nav className="navbar navbar-expand-lg flex justify-around items-center text-base">
             <div className="container-fluid ">
-                <div className="mb-2"><Link href="/">Home</Link></div>
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> */}
-                    {/* <span className="RxHamburgerMenu"></span> */}
-                    {/* <RxHamburgerMenu></RxHamburgerMenu> */}
-                {/* </button> */}
-                {/* <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                {/* <div className="mb-2"><Link href="/">Home</Link></div> */}
+                {/* <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                   <span className="RxHamburgerMenu"></span> 
+                   <RxHamburgerMenu></RxHamburgerMenu> 
+                 </button>  */}
+                 <div className=" flex justify-around collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav me-auto ">
-                        <li className="nav-item mb-2"><div><Link href="/about">About Us</Link></div></li>
-                        <li className="nav-item mb-2"><div><Link href='/faculty'>Faculty</Link></div></li>
-                        <li className="nav-item mb-2"><div><Link href="#events">Events & Activities</Link></div></li>
+                        <li className="nav-item mb-2 mr-6 hover:border-b-2 border-solid border-green-600"><div><Link href="/AboutUs">About Us</Link></div></li>
+                        <li className="nav-item mb-2  hover:border-b-2 border-solid border-green-600"><div><Link href='/Product'>Products</Link></div></li>
+                        {/* <li className="nav-item mb-2"><div><Link href="#events">Events & Activities</Link></div></li>
                         <li className="nav-item mb-2"><div><Link href='/club'>Clubs</Link></div></li>
                         <li className="nav-item mb-2"><div><Link href='/library'>Library</Link></div></li>
-                        <li className="nav-item mb-2"><div><Link href="/placement">Placements</Link></div></li>
-                        <li className="nav-item mb-2"><div className={``}><Link href="/login">Log In </Link></div></li>
-                        <li className="nav-item mb-2"><div className={` flex items-center h-full justify-center}`}><button type="button" className={`font-serif font-semibold  `} data-bs-toggle="modal" data-bs-target="#exampleModal">Log out</button></div></li>
+                        <li className="nav-item mb-2"><div><Link href="/placement">Placements</Link></div></li> */}
+                        {/* <li className="nav-item mb-2"><div className={``}><Link href="/login">Log In </Link></div></li> */}
+                        {/* <li className="nav-item mb-2"><div className={` flex items-center h-full justify-center}`}><button type="button" className={`font-serif font-semibold  `} data-bs-toggle="modal" data-bs-target="#exampleModal">Log out</button></div></li> */}
 
                     </ul>
 
                 </div>
             </div>
-        </nav> */}
+        </nav> 
             <div  className='inline-flex space-x-5 my-auto'>
               <Link href="/cart"><a className='inline-flex text-2xl hover:text-green-600 text-green-600  '><button><BsCartFill /></button></a></Link>
               <div className="dropdown">
