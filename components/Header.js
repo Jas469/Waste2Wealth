@@ -82,12 +82,13 @@ const Header = () => {
       </div>
     </div>
 
-    <section className='h-16 w-full flex sticky top-0 order-2 z-10 bg-white justify-center flex-row shadow-lg'>
-      <div className="max-w-[1600px]  w-full justify-center flex">
+    <section className='h-16 w-full flex sticky top-0 order-2 z-10 bg-white  flex-row shadow-lg'>
+      <div className="max-w-[1600px] w-full flex">
         <div className='flex w-full flex-row justify-between '>
           <div className='ml-10 w-fit inline-flex xsm:justify-center xsm:flex h-12 my-auto'><Link href="/"><img className='cursor-pointer rounded ' src="/logo-color.png" alt="" /></Link></div>
-          <div className='flex justify-around my-auto xsm:absolute top-[75px]'>
-            {/* <form method="GET" action="/product">
+          
+          <div className='flex my-auto xsm:absolute top-[75px]'>
+            <form method="GET" action="/product">
               <div className="relative text-gray-600 focus-within:text-gray-400 border-2 border-gray-400 rounded-md">
                 <span className="absolute inset-y-0 left-0 flex items-center pl-2 ">
                   <button type="submit" className="p-1 " >
@@ -96,10 +97,10 @@ const Header = () => {
                 </span>
                 <input type="search" name="q" className="py-2 text-sm rounded-md pl-10 w-80 my-auto outline-none bg-gray-50 focus:text-gray-900" placeholder="Search..." autoComplete="off" />
               </div>
-            </form> */}
+            </form>
           </div>
 
-          <div>
+          <div className='inline-flex space-x-5 my-auto mr-32'>
           {/* <nav className="navbar navbar-expand-lg bg-gradient-to-r from-amber-800 via-yellow-500 to-amber-800 flex justify-around items-center font-serif text-md font-semibold">
             <div className="container-fluid ">
                 <div className="mb-2"><Link href="/">Home</Link></div>
@@ -123,7 +124,7 @@ const Header = () => {
                 </div>
             </div>
         </nav> */}
-            <div className='inline-flex space-x-5 my-auto mr-32'>
+            <div  className='inline-flex space-x-5 my-auto'>
               <Link href="/cart"><a className='inline-flex text-2xl hover:text-green-600 text-green-600  '><button><BsCartFill /></button></a></Link>
               <div className="dropdown">
                 <button className=" inline-flex text-2xl pt-2 text-green-600   hover:text-green-600 dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" onClick={just}>
