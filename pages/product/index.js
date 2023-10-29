@@ -42,7 +42,7 @@ const Product = () => {
   return (
 <div className='flex'>
   {/* <SidebarProd/> */}
-  <div className='h-[579px] w-[210px] flex-col space-y-3 border-2 bg-slate-800  border-solid border-white '>
+  {/* <div className='h-[579px] w-[210px] flex-col space-y-3 border-2 bg-slate-800  border-solid border-white '>
                 <div className="flex justify-center text-center  rounded-xl  mt-4 mb-3 text-white" >
                 
                         <button value="" onClick={showresult} className="h-10 text-white text-2xl w-full bg-fixed uppercase font-bold "><div className="flex "><div className='mt-1'><MdDomainVerification size={30} /></div><div className="  ml-4">Items</div></div>
@@ -98,7 +98,7 @@ const Product = () => {
                     
                 </button>
                 
-            </div>
+            </div> */}
 
 <section className=" h-[90vh]  overflow-y-auto scrollbar-thin scrollbar-track-white scrollbar-thumb-gray-400 mt-3 flex justify-center ">
 <div className='flex max-w-[1410px]  flex-wrap justify-evenly w-[95%] bg-slate-50 rounded-xl'>
