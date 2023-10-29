@@ -117,7 +117,7 @@ const Header = () => {
                  <div className=" flex justify-around collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav me-auto ">
                         <li className="nav-item mb-2 mr-6 hover:border-b-2 border-solid border-green-600"><div><Link href="/AboutUs">About Us</Link></div></li>
-                        <li className="nav-item mb-2  hover:border-b-2 border-solid border-green-600"><div><Link href='/Product'>Products</Link></div></li>
+                        <li className="nav-item mb-2  hover:border-b-2 border-solid border-green-600"><div><Link href='/product'>Products</Link></div></li>
                         {/* <li className="nav-item mb-2"><div><Link href="#events">Events & Activities</Link></div></li>
                         <li className="nav-item mb-2"><div><Link href='/club'>Clubs</Link></div></li>
                         <li className="nav-item mb-2"><div><Link href='/library'>Library</Link></div></li>

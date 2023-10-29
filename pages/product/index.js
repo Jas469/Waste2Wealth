@@ -8,7 +8,7 @@ import {RiLogoutCircleRLine} from 'react-icons/ri';
 import SidebarProd from "../SidebarProd";
 const Product = () => {
   const [alldata, setalldata] = useState([])
-
+// console.log(props.res)
   const showresult=(e)=>{
     e.preventDefault()
     // data.map((curr)=>{
@@ -51,50 +51,50 @@ const Product = () => {
                 </div>
                 <button value="electronics" onClick={showresult} className="flex text-left hover:bg-green-600 hover:text-black rounded-xl" >
                 
-                        <button  className="h-10 w-full text-white text-left bg-fixed ml-5 "><div className="flex hover:text-black"><div><MdOutlineCreateNewFolder size={25}></MdOutlineCreateNewFolder></div><button  className=" hover:text-black ml-4">Electronics</button></div>
-                        </button>
+                        <div  className="h-10 w-full text-white text-left bg-fixed ml-5 "><div className="flex hover:text-black"><div><MdOutlineCreateNewFolder size={25}></MdOutlineCreateNewFolder></div><button  className=" hover:text-black ml-4">Electronics</button></div>
+                        </div>
                     
                 </button>
                 <button  value="clothes" onClick={showresult} className="flex text-left hover:bg-green-600 hover:text-black rounded-xl" >
                 
-                        <button  className="h-10 w-full text-white text-left bg-fixed ml-5 "><div className="flex hover:text-black"><div><MdOutlineCreateNewFolder size={25}></MdOutlineCreateNewFolder></div><button  className=" hover:text-black ml-4">Clothes</button></div>
-                        </button>
+                        <div  className="h-10 w-full text-white text-left bg-fixed ml-5 "><div className="flex hover:text-black"><div><MdOutlineCreateNewFolder size={25}></MdOutlineCreateNewFolder></div><button  className=" hover:text-black ml-4">Clothes</button></div>
+                        </div>
                     
                 </button>
                 <button value="jewellery" onClick={showresult} className="flex text-left hover:bg-green-600 hover:text-black rounded-xl" >
                 
-                        <button  className="h-10 w-full text-white text-left bg-fixed ml-5 "><div className="flex hover:text-black"><div><MdOutlineCreateNewFolder size={25}></MdOutlineCreateNewFolder></div><button   className=" hover:text-black ml-4">Jewellery </button></div>
-                        </button>
+                        <div  className="h-10 w-full text-white text-left bg-fixed ml-5 "><div className="flex hover:text-black"><div><MdOutlineCreateNewFolder size={25}></MdOutlineCreateNewFolder></div><button   className=" hover:text-black ml-4">Jewellery </button></div>
+                        </div>
                     
                 </button>
                 <button value="footwears" onClick={showresult} className="flex text-left hover:bg-green-600 hover:text-black rounded-xl" >
                 
-                        <button  className="h-10 w-full text-white text-left bg-fixed ml-5 "><div className="flex hover:text-black"><div><MdOutlineCreateNewFolder size={25}></MdOutlineCreateNewFolder></div><button   className=" hover:text-black ml-4">Footwears</button></div>
-                        </button>
+                        <div  className="h-10 w-full text-white text-left bg-fixed ml-5 "><div className="flex hover:text-black"><div><MdOutlineCreateNewFolder size={25}></MdOutlineCreateNewFolder></div><button   className=" hover:text-black ml-4">Footwears</button></div>
+                        </div>
                     
                 </button>
                 <button value="papers" onClick={showresult} className="flex text-left hover:bg-green-600 hover:text-black rounded-xl" >
                 
-                        <button  className="h-10 w-full text-white text-left bg-fixed ml-5 "><div className="flex hover:text-black"><div><MdOutlineCreateNewFolder size={25}></MdOutlineCreateNewFolder></div><button   className=" hover:text-black ml-4">Papers</button></div>
-                        </button>
+                        <div  className="h-10 w-full text-white text-left bg-fixed ml-5 "><div className="flex hover:text-black"><div><MdOutlineCreateNewFolder size={25}></MdOutlineCreateNewFolder></div><button   className=" hover:text-black ml-4">Papers</button></div>
+                        </div>
                     
                 </button>
                 <button value="plastic" onClick={showresult} className="flex text-left hover:bg-green-600 hover:text-black rounded-xl" >
                 
-                        <button  className="h-10 w-full text-white text-left bg-fixed ml-5 "><div className="flex hover:text-black"><div><MdOutlineCreateNewFolder size={25}></MdOutlineCreateNewFolder></div><button   className=" hover:text-black ml-4">Plastic</button></div>
-                        </button>
+                        <div  className="h-10 w-full text-white text-left bg-fixed ml-5 "><div className="flex hover:text-black"><div><MdOutlineCreateNewFolder size={25}></MdOutlineCreateNewFolder></div><button   className=" hover:text-black ml-4">Plastic</button></div>
+                        </div>
                     
                 </button>
                 <button value="wood" onClick={showresult} className="flex text-left hover:bg-green-600 hover:text-black rounded-xl" >
                 
-                        <button  className="h-10 w-full text-white text-left bg-fixed ml-5 "><div className="flex hover:text-black"><div><MdOutlineCreateNewFolder size={25}></MdOutlineCreateNewFolder></div><button className=" hover:text-black ml-4">Wood</button></div>
-                        </button>
+                        <div  className="h-10 w-full text-white text-left bg-fixed ml-5 "><div className="flex hover:text-black"><div><MdOutlineCreateNewFolder size={25}></MdOutlineCreateNewFolder></div><button className=" hover:text-black ml-4">Wood</button></div>
+                        </div>
                     
                 </button>
                 <button value="glass" onClick={showresult} className="flex text-left hover:bg-green-600 hover:text-black rounded-xl" >
                 
-                        <button  className="h-10 w-full text-white text-left bg-fixed ml-5 "><div className="flex hover:text-black"><div><MdOutlineCreateNewFolder size={25}></MdOutlineCreateNewFolder></div><div className=" ml-4">Glass</div></div>
-                        </button>
+                        <div  className="h-10 w-full text-white text-left bg-fixed ml-5 "><div className="flex hover:text-black"><div><MdOutlineCreateNewFolder size={25}></MdOutlineCreateNewFolder></div><div className=" ml-4">Glass</div></div>
+                        </div>
                     
                 </button>
                 

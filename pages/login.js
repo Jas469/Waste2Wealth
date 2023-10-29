@@ -63,7 +63,7 @@ else{
         else
         {Router.push(cok);}
         setspinner('hidden')
-      }, 3000);
+      }, 1000);
       cookie.set('token',response.token);
 }
     }
