@@ -6,15 +6,15 @@ import cookie from 'js-cookie'
 import Router from 'next/router'
 const Sell = () => {
     const [image, setimage] = useState('')
-    const [category, setcategory] = useState('fd')
-    const [product, setproduct] = useState('fd')
-    const [count, setcount] = useState('fd')
-    const [phone, setphone] = useState('fd')
-    const [weight, setweight] = useState('fd')
-    const [location, setlocation] = useState('fd')
-    const [price, setprice] = useState('fd')
-    const [city, setcity] = useState('fd')
-    const [state, setstate] = useState('fd')
+    const [category, setcategory] = useState('')
+    const [product, setproduct] = useState('')
+    const [count, setcount] = useState('2')
+    const [phone, setphone] = useState('123456789')
+    const [weight, setweight] = useState('2kg')
+    const [location, setlocation] = useState('Mohali')
+    const [price, setprice] = useState('')
+    const [city, setcity] = useState('mohali')
+    const [state, setstate] = useState('punjab')
     const imageupload=async (e)=>{
         const formdata=new FormData()
         formdata.append("file",e.target.files[0]);
