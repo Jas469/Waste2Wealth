@@ -105,13 +105,13 @@ const handlesubmit=async(e)=>{
           <label htmlFor="promo" className="font-semibold inline-block mb-3 text-sm uppercase">Promo Code</label>
           <input type="text" id="promo" placeholder="Enter your code" className="p-2 text-sm w-full"/>
         </div>
-        <button className="bg-orange-500 hover:bg-orange-600 rounded px-5 py-2 text-sm text-white uppercase">Apply</button>
+        <button className="bg-green-500 hover:bg-green-600 rounded px-5 py-2 text-sm text-white uppercase">Apply</button>
         <div className="border-t mt-8">
           <div className="flex font-semibold justify-between py-6 text-sm uppercase">
             <span>Total cost</span>
             <span>₹ {tt}</span>
           </div>
-          <button className="bg-gray-500 font-semibold hover:bg-gray-600 py-2 rounded text-sm text-white uppercase w-full">Checkout</button>
+          <button className="bg-gray-500 font-semibold hover:bg-gray-600 py-2 rounded text-sm text-white uppercase w-full"><>Checkout</></button>
         </div>
       </div>
 
